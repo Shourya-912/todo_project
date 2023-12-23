@@ -1,0 +1,19 @@
+{% extends 'todo_app/base.html' %}
+
+{% block title %}Todo List{% endblock %}
+
+{% block content %}
+    <h1>Todo List</h1>
+    <ul>
+        {% for todo in todos %}
+            <li>
+                <strong>{{ todo.title }}</strong>
+                <p>{{ todo.description }}</p>
+                <p>Status: {{ todo.status }}</p>
+                <p>Due Date: {{ todo.due_date }}</p>
+                <p>Tags: {% for tag in todo.tags.all %}{{ tag.name }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'todo-list-create' %}">Create Todo</a>
+{% endblock %}

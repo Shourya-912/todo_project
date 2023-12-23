@@ -1,0 +1,13 @@
+{% extends 'todo_app/base.html' %}
+
+{% block title %}{{ todo.title }} - Todo Detail{% endblock %}
+
+{% block content %}
+    <h1>{{ todo.title }}</h1>
+    <p>{{ todo.description }}</p>
+    <p>Status: {{ todo.status }}</p>
+    <p>Due Date: {{ todo.due_date }}</p>
+    <p>Tags: {% for tag in todo.tags.all %}{{ tag.name }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+    <a href="{% url 'todo-retrieve-update-destroy' pk=todo.pk %}">Edit Todo</a>
+    <!-- Add a form for deletion if needed -->
+{% endblock %}

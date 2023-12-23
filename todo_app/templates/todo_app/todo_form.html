@@ -1,0 +1,14 @@
+{% extends 'todo_app/base.html' %}
+
+{% block title %}Create / Update Todo{% endblock %}
+
+{% block content %}
+    <h1>Create / Update Todo</h1>
+    <form method="post" action="{% if todo %}{% url 'todo-retrieve-update-destroy' pk=todo.pk %}{% else %}{% url 'todo-list-create' %}{% endif %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'todo_app/base.html' %}
+
+{% block title %}Tag List{% endblock %}
+
+{% block content %}
+    <h1>Tag List</h1>
+    <ul>
+        {% for tag in tags %}
+            <li>
+                <strong>{{ tag.name }}</strong>
+                <a href="{% url 'tag-detail' pk=tag.pk %}">View Tag</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

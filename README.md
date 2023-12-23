@@ -53,7 +53,7 @@ Lint the code using flake8 and black:
   
   ` black .`
    
-# Github commands
+# Github Commands
 
 Github commands to add, commit, and push the changes:
   `git add .`
@@ -63,3 +63,7 @@ Github commands to add, commit, and push the changes:
   `git push origin main`
   
 You can write any other commit message instead of above message
+
+# Coverage Report
+
+![Screenshot 2023-12-23 191126](https://github.com/Shourya-912/todo_project/assets/138221216/1fc9e5c1-744e-43ee-bb9d-943952646c2e)

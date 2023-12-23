@@ -1,6 +1,8 @@
 # todo_project/tests.py
+
 from django.test import TestCase
 from todo_app.tests import TodoAPITest, TodoModelTest
+
 
 class TodoIntegrationTest(TestCase):
     # Include TodoAPITest and TodoModelTest as part of TodoIntegrationTest

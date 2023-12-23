@@ -7,7 +7,7 @@ from .models import Todo, Tag
 class TagSerializer(serializers.ModelSerializer):
     class Meta:
         model = Tag
-        fields = '__all__'
+        fields = "__all__"
 
 
 class TodoSerializer(serializers.ModelSerializer):
@@ -15,4 +15,4 @@ class TodoSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Todo
-        fields = '__all__'
+        fields = "__all__"

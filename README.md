@@ -63,7 +63,3 @@ Github commands to add, commit, and push the changes:
   `git push origin main`
   
 You can write any other commit message instead of above message
-
-# License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
